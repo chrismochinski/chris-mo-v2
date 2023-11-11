@@ -1,4 +1,6 @@
 import logo from "./logo.svg";
+import "./TempHome.scss";
+
 
 export function TempHome(): JSX.Element {
   return (

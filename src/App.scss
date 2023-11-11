@@ -1,20 +1,4 @@
-.tempHome{
-  text-align: center;
-  .tempHomeHeader {
-    background-color: #292c33;
-    min-height: calc(5vw + 10vh);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    .tempHomeLogo {
-      height: 100vmin;
-      pointer-events: none;
-    }
-  }
-}
+
 
 // revisit
 @media (prefers-reduced-motion: no-preference) {
