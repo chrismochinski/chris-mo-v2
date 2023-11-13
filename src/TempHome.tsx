@@ -7,7 +7,7 @@ export function TempHome(): JSX.Element {
     <div className="tempHome">
       <header className="tempHomeHeader">
         <img src={logo} className="tempHomeLogo" alt="logo" />
-        <p>IS IT WORKING??</p>
+        <p>wait for it<span>_</span></p>
       </header>
     </div>
   );
