@@ -18,6 +18,26 @@
       animation: flash infinite 2000ms linear;
       font-weight: 400;
     }
+    .defaultLink {
+      color: #61dafb;
+      text-decoration: none;
+      &:after {
+        content: '';
+        background-color: #61dafb;
+        width: 100%;
+        height: 1.5px;
+        display: block;
+        margin-inline: auto 0;
+        transition: width 150ms ease-in-out;
+        margin-top: -2px;
+      }
+      &:hover:after {
+        width: 0%;
+      }
+      &:visited {
+        color: #61dafb;
+      }
+    }
   }
 }
 
