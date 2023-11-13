@@ -10,7 +10,7 @@
     font-size: calc(10px + 2vmin);
     color: white;
     .tempHomeLogo {
-      width: 30vw;
+      width: clamp(260px, 30vw, 540px);
       animation: tempHomeLogoSpin infinite 20000ms linear;
     }
   }
