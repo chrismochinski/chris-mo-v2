@@ -8,11 +8,14 @@ export function TempHome(): JSX.Element {
 
   function startBoomBoom() {
     setTimeout(() => {
-      console.log("%cit's time", "color: #ff000088; font-style: italic; font-weight: 200; font-size: 8px;");
+      console.log("%cit's time", "color: #22ff00; font-style: italic; font-weight: 300; font-size: 10px;");
     }, 400);
     setTimeout(() => {
-      console.log("%care you ready?", "color: #ff0000cf; font-style: italic; font-weight: 400; font-size: 12px;");
+      console.log("%care you ready?", "color: #00e5ff; font-style: italic; font-weight: 500; font-size: 16px;");
     }, 1400);
+    setTimeout(() => {
+      console.log("%c(man I need an official color scheme...)", "color:#ff00d0; font-weight: 400; font-size: 14px;");
+    }, 3400);
     setIntroIsTyped(true);
   }
 
