@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Slider } from ".";
+import { Slider } from "./Slider";
 import "./HeaderMenu.scss";
 
 export function HeaderMenu(): JSX.Element {
@@ -12,7 +12,6 @@ export function HeaderMenu(): JSX.Element {
   };
 
   useEffect(() => {
-    console.log('%cHeaderMenu!', 'color: #ff00ff; font-weight: 700; font-size: 16px;')
     console.log("slider values changed to", sliderValues);
   }, [sliderValues]);
 

@@ -1,4 +1,4 @@
-import { SliderTicks } from ".";
+import { SliderTicks } from "./SliderTicks";
 
 interface SliderProps {
   sliderValue: number;
@@ -23,9 +23,9 @@ export function Slider(props: SliderProps): JSX.Element {
         />
         <SliderTicks side="right" />
       </div>
-      {/* <h4 className="sliderValue">
+      <h4 className="sliderValue">
         Slider value: <span>{sliderValue}</span>
-      </h4> */}
+      </h4>
     </div>
   );
 }
