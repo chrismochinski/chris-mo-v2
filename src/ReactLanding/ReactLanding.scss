@@ -1,14 +1,16 @@
+@import '../BaseStyles.scss';
+
 .ReactLanding {
   text-align: center;
   .ReactLandingHeader {
-    background-color: #292c33;
+    background-color: $react-grey;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: $white;
     .ReactLandingLogo {
       width: clamp(260px, 30vw, 540px);
       animation: ReactLandingLogoSpin infinite 20000ms linear;
