@@ -9,11 +9,11 @@
   gap: 1em;
   h4 {
     font-size: clamp(1em, 2vw, 1.5em);
-    color: #FFF59D;
+    color: #fff59d;
     margin: 0;
     font-weight: 300;
     span {
-        font-weight: 700;
+      font-weight: 700;
     }
   }
   .slider {
@@ -26,13 +26,19 @@
       -webkit-appearance: none;
     }
     &[type="range"] {
+        background-color: #00000060;
+        box-shadow:
+            0.15em 0 0.1em #ffffff50 inset,
+            -0.4em 0.25em 0.2em #00000080 inset,
+            0 -0.25em 0.2em #00000070 inset;
+        display: block;
+        padding: 0 0.1em;
+        width: 7px;
+        height: 240px;
+        border-radius: 4px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
         appearance: none;
-      width: 1em;
-      background: #ffffff30;
-      outline: transparent;
-      cursor: pointer;
-      box-shadow: inset 2px 0 5px #000000, inset -3px 0 5px #FFFFFF;
-      border-radius: 1.5rem;
     }
     &[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -41,7 +47,7 @@
       width: 30px;
       aspect-ratio: 1/2;
       background-repeat: no-repeat;
-      filter: drop-shadow(4px 2px 6px #00000095);
+      filter: drop-shadow(3px 2px 6px #000000BB);
     }
   }
   .headline {
