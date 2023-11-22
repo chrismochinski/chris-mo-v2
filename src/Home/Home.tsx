@@ -10,6 +10,7 @@ export function Home(): JSX.Element {
   }, [sliderValue]);
   return (
     <div className="homeWrapper">
+        <h4>Slider value: <span>{sliderValue}</span></h4>
 
       <input
         type="range"

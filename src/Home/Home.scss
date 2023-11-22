@@ -7,6 +7,15 @@
   align-items: center;
   justify-content: center;
   gap: 1em;
+  h4 {
+    font-size: clamp(1em, 2vw, 1.5em);
+    color: #FFF59D;
+    margin: 0;
+    font-weight: 300;
+    span {
+        font-weight: 700;
+    }
+  }
   .slider {
     //orient vertically
     writing-mode: vertical-rl;
