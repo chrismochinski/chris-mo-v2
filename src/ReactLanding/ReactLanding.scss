@@ -1,6 +1,6 @@
-.tempHome {
+.ReactLanding {
   text-align: center;
-  .tempHomeHeader {
+  .ReactLandingHeader {
     background-color: #292c33;
     min-height: 100vh;
     display: flex;
@@ -9,9 +9,9 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    .tempHomeLogo {
+    .ReactLandingLogo {
       width: clamp(260px, 30vw, 540px);
-      animation: tempHomeLogoSpin infinite 20000ms linear;
+      animation: ReactLandingLogoSpin infinite 20000ms linear;
     }
     .waitForItText {
       font-size: clamp(22px, 5vw, 32px);
@@ -41,7 +41,7 @@
   }
 }
 
-@keyframes tempHomeLogoSpin {
+@keyframes ReactLandingLogoSpin {
   from {
     transform: rotate(0deg);
   }

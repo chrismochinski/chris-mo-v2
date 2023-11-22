@@ -1,0 +1,22 @@
+.homeWrapper {
+    min-height: 100vh;
+    text-align: center;
+    background-color: #292c33;
+    .headline {
+        font-size: clamp(2em, 5vw, 3em);
+        color: #ffffff;
+        margin: 0;
+        padding-block: 5em 2em;
+    }
+    .backLink {
+        font-size: clamp(1em, 2vw, 1.5em);
+        text-decoration: none;
+        color: #61dafb;
+        &:visited {
+            color: #61dafb;
+        }
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+}
