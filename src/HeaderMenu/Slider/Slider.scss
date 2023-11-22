@@ -47,8 +47,9 @@
       flex-direction: column;
       justify-content: space-between;
       height: 113px;
+      font-weight: 300;
       &.rightTicks {
-        margin-left: 12px;
+        margin-left: 10px;
         align-items: baseline;
         .tick {
           flex-direction: row;
@@ -56,7 +57,7 @@
         }
       }
       &.leftTicks {
-        margin-right: 12px;
+        margin-right: 10px;
         align-items: flex-end;
         .tick {
           flex-direction: row-reverse;
