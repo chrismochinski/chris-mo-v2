@@ -1,34 +1,32 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { SliderTicks } from ".";
+import { Slider } from ".";
 import "./Home.scss";
 
 export function Home(): JSX.Element {
-  const [sliderValue, setSliderValue] = useState(3);
+  const [sliderValues, setSliderValues] = useState([3, 7, 1, 4]);
+
+  const setSliderValue = (index: number, value: number) => {
+    const newValues = [...sliderValues];
+    newValues[index] = value;
+    setSliderValues(newValues);
+  };
 
   useEffect(() => {
-    console.log("slider value changed to", sliderValue);
-  }, [sliderValue]);
+    console.log("slider values changed to", sliderValues);
+  }, [sliderValues]);
 
   return (
     <div className="homeWrapper">
-      <div className="sliderContainer">
-        <SliderTicks side="left" />
-        <input
-          type="range"
-          min="0"
-          max="10"
-          className="slider"
-          step="0.1"
-          value={sliderValue}
-          onChange={(e) => setSliderValue(Number(e.target.value))}
-        />
-        <SliderTicks side="right" />
+      <div className="sliderRowContainer">
+        {sliderValues.map((value, index) => (
+          <Slider
+            key={index}
+            sliderValue={value}
+            setSliderValue={(value) => setSliderValue(index, value)}
+          />
+        ))}
       </div>
-
-      <h4 className="sliderValue">
-        Slider value: <span>{sliderValue}</span>
-      </h4>
       <Link className="backLink" to="/">
         Back to landing
       </Link>

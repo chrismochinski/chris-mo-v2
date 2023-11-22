@@ -1,4 +1,4 @@
-import './SliderTicks.scss';
+import './Slider.scss';
 
 export interface SliderTicksProps {
     side: "left" | "right";

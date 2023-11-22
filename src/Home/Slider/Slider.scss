@@ -1,0 +1,104 @@
+@import "../../BaseStyles.scss";
+
+.sliderOuterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  .sliderContainer {
+    display: flex;
+    align-items: center;
+    .slider {
+      //orient vertically
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      height: 200px;
+      &[type="range"],
+      &[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+      }
+      &[type="range"] {
+        background-color: #00000060;
+        box-shadow: 0.12em 0 0.1em #ffffff50 inset, -0.4em 0.25em 0.2em #00000080 inset,
+          0 -0.25em 0.2em #00000070 inset;
+        display: block;
+        padding: 0 0.1em;
+        width: 7px;
+        height: 210px;
+        border-radius: 4px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      &[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background-image: url("../../assets/slider-ph.png");
+        background-size: contain;
+        width: 27px;
+        aspect-ratio: 1/2;
+        background-repeat: no-repeat;
+        filter: drop-shadow(8px 2px 7px #00000099);
+      }
+    }
+
+    .ticks {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 173px;
+      &.rightTicks {
+        margin-left: 18px;
+        align-items: baseline;
+        .tick {
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+      }
+      &.leftTicks {
+        margin-right: 18px;
+        align-items: flex-end;
+        .tick {
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+        }
+      }
+
+      .tick {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        .tickLine {
+          border-bottom: 2px solid $light-yellow;
+          width: 10px;
+        }
+
+        .tickLineWithLabel {
+          border-bottom: 2px solid $light-yellow;
+          width: 16px;
+        }
+
+        .tickLabel {
+          font-family: $poppins;
+          color: $white;
+          font-size: 15px;
+        }
+
+        &.labeled .tickLine {
+          border-bottom-width: 3px;
+        }
+      }
+    }
+  }
+  .sliderValue {
+    width: 170px;
+    font-size: 1.25em;
+    color: #fff59d;
+    margin: 0;
+    font-weight: 300;
+    span {
+      font-weight: 700;
+      color: #fb8c00;
+    }
+  }
+}
