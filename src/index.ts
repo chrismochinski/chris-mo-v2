@@ -1,2 +1,2 @@
 export * from './ReactLanding';
-export * from './Home';
+export * from './HeaderMenu';

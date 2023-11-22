@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import { HeaderMenu } from "..";
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import "./ReactLanding.scss";
@@ -31,6 +32,7 @@ export function ReactLanding(): JSX.Element {
 
   return (
     <div className="ReactLanding">
+      <HeaderMenu />
       <header className="ReactLandingHeader">
         <img src={logo} className="ReactLandingLogo" alt="logo" />
         {/* <p className="waitForItText">Edit src/App.js and save to reload</p> */}

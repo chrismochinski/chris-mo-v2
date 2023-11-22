@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Slider } from ".";
-import "./Home.scss";
+import "./HeaderMenu.scss";
 
-export function Home(): JSX.Element {
+export function HeaderMenu(): JSX.Element {
   const [sliderValues, setSliderValues] = useState([3, 7, 1, 4]);
 
   const setSliderValue = (index: number, value: number) => {
@@ -17,7 +16,7 @@ export function Home(): JSX.Element {
   }, [sliderValues]);
 
   return (
-    <div className="homeWrapper">
+    <div className="headerMenuWrapper">
       <div className="sliderRowContainer">
         {sliderValues.map((value, index) => (
           <Slider
@@ -27,9 +26,6 @@ export function Home(): JSX.Element {
           />
         ))}
       </div>
-      <Link className="backLink" to="/">
-        Back to landing
-      </Link>
     </div>
   );
 }

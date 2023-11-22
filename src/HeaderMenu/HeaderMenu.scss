@@ -1,12 +1,14 @@
-.homeWrapper {
-  min-height: 100vh;
+@import "../BaseStyles.scss";
+
+.headerMenuWrapper {
+  min-height: 220px;
+  width: 100vw;
   text-align: center;
-  background-color: #292c33;
+  background-color: $light-grey;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2em;
   .sliderRowContainer {
     width: 80vw;
     display: flex;
