@@ -4,37 +4,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
+  justify-content: space-around;
+  height: 150px;
   .sliderContainer {
     display: flex;
     align-items: center;
     .slider {
-      //orient vertically
       writing-mode: vertical-rl;
       text-orientation: mixed;
-      height: 180px;
       &[type="range"],
       &[type="range"]::-webkit-slider-thumb {
         -webkit-appearance: none;
       }
       &[type="range"] {
         background-color: #00000060;
-        box-shadow: 0.12em 0 0.1em #ffffff50 inset, -0.4em 0.25em 0.2em #00000080 inset,
-          0 -0.25em 0.2em #00000070 inset;
         display: block;
         padding: 0 0.1em;
         width: 5px;
-        height: 180px;
+        height: 140px;
         border-radius: 4px;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
       }
+
       &[type="range"]::-webkit-slider-thumb {
         -webkit-appearance: none;
         background-image: url("../../assets/slider-ph.png");
         background-size: contain;
-        width: 25px;
+        width: 21px;
         aspect-ratio: 1/2;
         background-repeat: no-repeat;
         filter: drop-shadow(8px 2px 7px #00000099);
@@ -45,9 +43,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 153px;
+      height: 113px;
+      font-weight: 300;
       &.rightTicks {
-        margin-left: 18px;
+        margin-left: 10px;
         align-items: baseline;
         .tick {
           flex-direction: row;
@@ -55,7 +54,7 @@
         }
       }
       &.leftTicks {
-        margin-right: 18px;
+        margin-right: 10px;
         align-items: flex-end;
         .tick {
           flex-direction: row-reverse;
@@ -69,19 +68,19 @@
         gap: 14px;
 
         .tickLine {
-          border-bottom: 2px solid $light-yellow;
-          width: 10px;
+          border-bottom: 1px solid $light-yellow;
+          width: 8px;
         }
 
         .tickLineWithLabel {
-          border-bottom: 2px solid $light-yellow;
-          width: 16px;
+          border-bottom: 1px solid $light-yellow;
+          width: 14px;
         }
 
         .tickLabel {
           font-family: $poppins;
           color: $white;
-          font-size: 15px;
+          font-size: 10px;
         }
 
         &.labeled .tickLine {
@@ -92,13 +91,39 @@
   }
   .sliderValue {
     width: 170px;
-    font-size: 1.25em;
+    font-size: 12px;
     color: #fff59d;
     margin: 0;
     font-weight: 300;
     span {
       font-weight: 700;
       color: #fb8c00;
+    }
+  }
+  &:first-of-type .sliderContainer .slider {
+    &[type="range"] {
+      box-shadow: 0.12em 0 0.1em #ffffff50 inset, -0.4em 0.25em 0.2em #00000080 inset,
+        0 -0.25em 0.2em #00000070 inset;
+    }
+  }
+
+  &:nth-of-type(2) .sliderContainer .slider {
+    &[type="range"] {
+      box-shadow: 0.07em 0 0.08em #ffffff50 inset, -0.6em 0.25em 0.17em #00000080 inset,
+        0 -0.3em 0.2em #00000070 inset;
+    }
+  }
+
+  &:nth-of-type(3) .sliderContainer .slider {
+    &[type="range"] {
+      box-shadow: -0.07em 0 0.08em #ffffff50 inset, 0.6em 0.25em 0.17em #00000080 inset,
+      0 -0.3em 0.2em #00000070 inset;
+    }
+  }
+  &:last-of-type .sliderContainer .slider {
+    &[type="range"] {
+      box-shadow: -0.12em 0 0.1em #ffffff50 inset, 0.4em 0.25em 0.2em #00000080 inset,
+        0 -0.25em 0.2em #00000070 inset;
     }
   }
 }

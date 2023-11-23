@@ -1,2 +1,2 @@
-export * from './SliderTicks';
-export * from './Slider';
+export * from "./Slider";
+export * from "./SliderTicks";

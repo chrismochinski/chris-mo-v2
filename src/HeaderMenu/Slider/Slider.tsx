@@ -1,4 +1,4 @@
-import { SliderTicks } from ".";
+import { SliderTicks } from "./SliderTicks";
 
 interface SliderProps {
   sliderValue: number;
