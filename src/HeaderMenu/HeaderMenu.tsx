@@ -3,7 +3,7 @@ import { Slider } from "./Slider";
 import "./HeaderMenu.scss";
 
 export function HeaderMenu(): JSX.Element {
-  const [sliderValues, setSliderValues] = useState([3, 7, 1, 4]);
+  const [sliderValues, setSliderValues] = useState([0, 0, 0, 0]);
 
   const setSliderValue = (index: number, value: number) => {
     const newValues = [...sliderValues];
