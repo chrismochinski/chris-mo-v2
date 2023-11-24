@@ -4,7 +4,6 @@ export interface SliderTicksProps {
     side: "left" | "right";
 }
 
-
 export function SliderTicks(props: SliderTicksProps) {
     const { side } = props;
   const ticks = [];
