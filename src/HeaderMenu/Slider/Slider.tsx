@@ -3,10 +3,11 @@ import { SliderTicks } from "./SliderTicks";
 interface SliderProps {
   sliderValue: number;
   setSliderValue: (value: number) => void;
+  index: number;
 }
 
 export function Slider(props: SliderProps): JSX.Element {
-  const { sliderValue, setSliderValue } = props;
+  const { sliderValue, setSliderValue, index } = props;
 
   return (
     <div className="sliderOuterContainer">
@@ -16,16 +17,13 @@ export function Slider(props: SliderProps): JSX.Element {
           type="range"
           min="0"
           max="10"
-          className="slider"
+          className={`slider slider-${index}`}
           step="0.1"
           value={sliderValue}
           onChange={(e) => setSliderValue(Number(e.target.value))}
         />
         <SliderTicks side="right" />
       </div>
-      {/* <h4 className="sliderValue">
-        Slider value: <span>{sliderValue}</span>
-      </h4> */}
     </div>
   );
 }
