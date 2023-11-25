@@ -17,7 +17,7 @@ export function HeaderMenu(): JSX.Element {
 
   return (
     <div className="headerMenuWrapper">
-      <div className="sliderRowContainer">
+      <div className="headerControlsContainer">
         {sliderValues.map((value, index) => (
           <Slider
             key={index}
