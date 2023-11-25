@@ -23,6 +23,7 @@ export function HeaderMenu(): JSX.Element {
             key={index}
             sliderValue={value}
             setSliderValue={(value) => setSliderValue(index, value)}
+            index={index}
           />
         ))}
       </div>

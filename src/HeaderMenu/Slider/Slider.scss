@@ -27,23 +27,44 @@
         -moz-appearance: none;
         appearance: none;
       }
-
       &[type="range"]::-webkit-slider-thumb {
+        z-index: 1;
         -webkit-appearance: none;
-        background-image: url("../../assets/slider-ph.png");
+        // background-image: url("../../assets/fader-center.png");
         background-size: contain;
         width: 21px;
         aspect-ratio: 1/2;
         background-repeat: no-repeat;
         filter: drop-shadow(8px 2px 7px #00000099);
       }
+      &.slider-0 {
+        &[type="range"]::-webkit-slider-thumb {
+          background-image: url("../../assets/fader-left.png");
+        }
+      }
+      &.slider-1, &.slider-2 {
+        &[type="range"]::-webkit-slider-thumb {
+          background-image: url("../../assets/fader-center.png");
+        }
+      }
+      &.slider-1 {
+        &[type="range"]::-webkit-slider-thumb {
+          margin-left: 2px;
+        }
+      }
+      &.slider-3 {
+        &[type="range"]::-webkit-slider-thumb {
+          background-image: url("../../assets/fader-right.png");
+        }
+      }
     }
 
     .ticks {
+      z-index: -1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 113px;
+      height: 97px;
       font-weight: 300;
       &.rightTicks {
         margin-left: 10px;
@@ -68,12 +89,14 @@
         gap: 14px;
 
         .tickLine {
-          border-bottom: 1px solid $light-yellow;
+          border-bottom: 1px solid $white;
+          opacity: 0.65;
           width: 8px;
         }
 
         .tickLineWithLabel {
-          border-bottom: 1px solid $light-yellow;
+          border-bottom: 1px solid $white;
+          opacity: 0.65;
           width: 14px;
         }
 
@@ -81,6 +104,8 @@
           font-family: $poppins;
           color: $white;
           font-size: 10px;
+          font-weight: 300;
+          opacity: 0.80;
         }
 
         &.labeled .tickLine {
