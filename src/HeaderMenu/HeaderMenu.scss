@@ -23,8 +23,7 @@
   .powerButtonContainer {
     aspect-ratio: 1/1;
     position: relative;
-    width: 90px;
-    height: 90px;
+    width: clamp(56px, 5vw, 70px);
     img {
       cursor: pointer;
       position: absolute;
