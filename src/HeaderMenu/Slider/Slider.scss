@@ -28,9 +28,9 @@
         appearance: none;
       }
       &[type="range"]::-webkit-slider-thumb {
+        cursor: pointer;
         z-index: 1;
         -webkit-appearance: none;
-        // background-image: url("../../assets/fader-center.png");
         background-size: contain;
         width: 21px;
         aspect-ratio: 1/2;
