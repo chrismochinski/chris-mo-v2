@@ -1,7 +1,10 @@
 @import "../BaseStyles.scss";
 
-
 .bulbBodyWrapper {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
+
+  .bulb {
+    //bulb should take up about 1/5 of the screen and they shoudl be absolute positionedon top of one
+  }
 }
