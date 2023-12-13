@@ -4,8 +4,13 @@ import "./HeaderMenu.scss";
 import powerButtonOff from "../assets/power-button-off.png";
 import powerButtonOn from "../assets/power-button-on.png";
 
-export function HeaderMenu(): JSX.Element {
-  const [sliderValues, setSliderValues] = useState([0, 0, 0, 0]);
+interface HeaderMenuProps {
+  sliderValues: number[];
+  setSliderValues: (values: number[]) => void;
+} 
+
+export function HeaderMenu(props: HeaderMenuProps): JSX.Element {
+  const { sliderValues, setSliderValues } = props;
   const [isPowerOn, setIsPowerOn] = useState(false);
 
   const setSliderValue = (index: number, value: number) => {
@@ -15,7 +20,8 @@ export function HeaderMenu(): JSX.Element {
   };
 
   useEffect(() => {
-    console.log("slider values changed to", sliderValues);
+    console.log('sliderValues: ', sliderValues);
+
   }, [sliderValues]);
 
   return (
