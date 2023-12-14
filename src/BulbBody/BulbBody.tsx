@@ -10,19 +10,26 @@ import "./BulbBody.scss";
 
 interface BulbBodyProps {
   sliderValues: number[];
-};
+}
 
 export function BulbBody(props: BulbBodyProps): JSX.Element {
   const { sliderValues } = props;
+  const bulbImagesOff = [bulb1Off, bulb2Off, bulb3Off, bulb4Off];
+  const bulbImagesOn = [bulb1On, bulb2On, bulb3On, bulb4On];
+
   return (
     <div className="bulbBodyWrapper">
       {sliderValues.map((value, index) => (
         <div key={index} className={`bulb${index + 1}Container bulbContainer`}>
-          <img className={`bulb bulb${index + 1} bulbOff`} src={`bulb${index + 1}Off`} alt={`bulb ${index + 1} - POWERED OFF`} />
-          <img 
-            className={`bulb bulb${index + 1} bulbOn`} 
-            src={`bulb${index + 1}On`} 
-            alt={`bulb ${index + 1} - POWERED ON`} 
+          <img
+            className={`bulb bulb${index + 1} bulbOff`}
+            src={bulbImagesOff[index]}
+            alt={`bulb ${index + 1} - POWERED OFF`}
+          />
+          <img
+            className={`bulb bulb${index + 1} bulbOn`}
+            src={bulbImagesOn[index]}
+            alt={`bulb ${index + 1} - POWERED ON`}
             style={{ opacity: value / 10 }}
           />
         </div>
