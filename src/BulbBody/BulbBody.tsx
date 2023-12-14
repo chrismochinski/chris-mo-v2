@@ -8,25 +8,32 @@ import bulb4Off from "../assets/bulbs/bulb-4-off.png";
 import bulb4On from "../assets/bulbs/bulb-4-on.png";
 import "./BulbBody.scss";
 
-export function BulbBody(): JSX.Element {
+interface BulbBodyProps {
+  sliderValues: number[];
+}
+
+export function BulbBody(props: BulbBodyProps): JSX.Element {
+  const { sliderValues } = props;
+  const bulbImagesOff = [bulb1Off, bulb2Off, bulb3Off, bulb4Off];
+  const bulbImagesOn = [bulb1On, bulb2On, bulb3On, bulb4On];
+
   return (
     <div className="bulbBodyWrapper">
-      <div className="bulb1Container bulbContainer">
-        <img id="bulb1Off" className="bulb bulb1 bulbOff" src={bulb1Off} alt="bulb 1 - far left - POWERED OFF" />
-        <img id="bulb1On" className="bulb bulb1 bulbOn" src={bulb1On} alt="bulb 1 - far left - POWERED ON" />
-      </div>
-      <div className="bulb3Container bulbContainer">
-        <img id="bulb3Off" className="bulb bulb3 bulbOff" src={bulb3Off} alt="bulb 3 - far left - POWERED OFF" />
-        <img id="bulb3On" className="bulb bulb3 bulbOn" src={bulb3On} alt="bulb 3 - far left - POWERED ON" />
-      </div>
-      <div className="bulb2Container bulbContainer">
-        <img id="bulb2Off" className="bulb bulb2 bulbOff" src={bulb2Off} alt="bulb 2 - far left - POWERED OFF" />
-        <img id="bulb2On" className="bulb bulb2 bulbOn" src={bulb2On} alt="bulb 2 - far left - POWERED ON" />
-      </div>
-      <div className="bulb4Container bulbContainer">
-        <img id="bulb4Off" className="bulb bulb4 bulbOff" src={bulb4Off} alt="bulb 4 - far left - POWERED OFF" />
-        <img id="bulb4On" className="bulb bulb4 bulbOn" src={bulb4On} alt="bulb 4 - far left - POWERED ON" />
-      </div>
+      {sliderValues.map((value, index) => (
+        <div key={index} className={`bulb${index + 1}Container bulbContainer`}>
+          <img
+            className={`bulb bulb${index + 1} bulbOff`}
+            src={bulbImagesOff[index]}
+            alt={`bulb ${index + 1} - POWERED OFF`}
+          />
+          <img
+            className={`bulb bulb${index + 1} bulbOn`}
+            src={bulbImagesOn[index]}
+            alt={`bulb ${index + 1} - POWERED ON`}
+            style={{ opacity: value / 10 }}
+          />
+        </div>
+      ))}
     </div>
   );
 }
