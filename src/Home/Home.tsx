@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { BulbBody } from "../BulbBody/BulbBody";
+import { BulbBody } from "../BulbBody";
 import { HeaderMenu } from "../HeaderMenu";
+
 
 export function Home(): JSX.Element {
   const [sliderValues, setSliderValues] = useState([0, 0, 0, 0]);
