@@ -2,8 +2,8 @@
 
 .bulbBodyWrapper {
     width: 95vw;
+    height: 80vh;
     margin-left: 5px;
-    height: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -11,7 +11,7 @@
   .bulbContainer {
     z-index: 100;
     position: relative;
-    width: 18%;
+    width: clamp(180px, 18%, 240px);
     .bulb {
       position: absolute;
       width: 100%;
