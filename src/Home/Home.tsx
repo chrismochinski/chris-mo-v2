@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BulbBody } from "../BulbBody";
 import { HeaderMenu } from "../HeaderMenu";
 import { AboutBulbContent } from "../AboutBulbContent";
+import "./Home.scss";
 
 
 export function Home(): JSX.Element {
