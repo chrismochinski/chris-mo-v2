@@ -1,37 +1,33 @@
 @import "../BaseStyles.scss";
 
 .aboutBulbContentWrapper {
-  position: absolute;
-  inset: 0;
-  margin: auto;
+    container-type: inline-size;
+    position: absolute;
+    inset: auto 0 24vh;
+    margin: auto auto auto calc(-170px + 28vw);
+    width: clamp(230px, 43vw, 500px);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   .aboutMeTitle {
     font-family: $poppins;
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-size: clamp(1.5rem, 10cqi, 2.5rem);
     font-weight: 700;
     color: $white;
     text-shadow: 0px 0px 10px #000000;
-    margin-bottom: 1rem;
+    margin-block: 0.15em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
   }
   .aboutMeText {
     font-family: $poppins;
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    line-height: 1.25em;
+    font-size: clamp(15px, 6cqi, 18px);
     font-weight: 400;
     color: $white;
     text-shadow: 0px 0px 10px #000000;
-    margin-bottom: 1rem;
-    &.name {
-        font-weight: 600;
-        font-size: 1.125em;
-    }
-    &.about {
-        font-weight: 500;
-        font-size: 1.1em;
-    }
-    &.mission {
-        font-weight: 400;
-        font-size: 1em;
-    }
+    margin-block: 0;
   }
 }

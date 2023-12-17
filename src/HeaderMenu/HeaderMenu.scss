@@ -1,6 +1,8 @@
 @import "../BaseStyles.scss";
 
 .headerMenuWrapper {
+  position: relative;
+  z-index: 999;
   width: 100vw;
   text-align: center;
   background-color: $black;

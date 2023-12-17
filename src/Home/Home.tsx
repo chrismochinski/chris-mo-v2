@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BulbBody } from "../BulbBody";
 import { HeaderMenu } from "../HeaderMenu";
+import { AboutBulbContent } from "../AboutBulbContent";
 
 
 export function Home(): JSX.Element {
@@ -10,6 +11,7 @@ export function Home(): JSX.Element {
     <div className="homeWrapper">
       <HeaderMenu sliderValues={sliderValues} setSliderValues={setSliderValues} />
       <BulbBody sliderValues={sliderValues} />
+      <AboutBulbContent />
     </div>
   );
 }
