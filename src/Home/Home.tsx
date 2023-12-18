@@ -3,6 +3,7 @@ import { BulbBody } from "../BulbBody";
 import { HeaderMenu } from "../HeaderMenu";
 import { AboutBulbContent } from "../AboutBulbContent";
 import "./Home.scss";
+import { WorkBulbContent } from "../WorkBulbContent";
 
 export function Home(): JSX.Element {
   const [sliderValues, setSliderValues] = useState([0, 0, 0, 0]);
@@ -12,6 +13,7 @@ export function Home(): JSX.Element {
       <HeaderMenu sliderValues={sliderValues} setSliderValues={setSliderValues} />
       <BulbBody sliderValues={sliderValues} />
       <AboutBulbContent opacity={sliderValues} />
+      <WorkBulbContent opacity={sliderValues} />
     </div>
   );
 }
