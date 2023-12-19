@@ -1,8 +1,13 @@
 import "./AboutBulbContent.scss";
 
-export function AboutBulbContent(): JSX.Element {
+interface AboutBulbContentProps {
+  opacity: number[];
+}
+
+export function AboutBulbContent(props: AboutBulbContentProps): JSX.Element {
+  const opacity = props.opacity[0] / 10;
   return (
-    <div className="aboutBulbContentWrapper">
+    <div className="aboutBulbContentWrapper" style={{ opacity: opacity }}>
       <div className="lightSource"></div>
       <div className="aboutMeTextWrapper">
         <h2 className="aboutMeTitle">About Me</h2>

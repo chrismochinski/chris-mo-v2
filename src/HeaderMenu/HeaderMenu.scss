@@ -17,6 +17,7 @@
   filter: drop-shadow(0px 15px 18px #000000bb);
   .headerControlsContainer {
     width: 74vw;
+    max-width: 1090px;
     display: flex;
     flex-direction: row;
     align-items: center;
