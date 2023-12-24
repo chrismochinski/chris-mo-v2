@@ -3,7 +3,7 @@
 .workBulbContentWrapper {
   container-type: inline-size;
   position: relative;
-  width: 50vw;
+  width: clamp(300px, 50vw, 500px);
   height: 42vh;
   display: flex;
   flex-direction: column;
