@@ -3,13 +3,14 @@
 .workBulbContentWrapper {
   container-type: inline-size;
   position: relative;
-  width: clamp(300px, 50vw, 500px);
+  width: clamp(520px, 70vw, 700px);
   height: 42vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-top: -100px;
+  margin-left: -5%;
   .lightSource {
     position: absolute;
     width: 100%;

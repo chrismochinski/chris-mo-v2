@@ -3,14 +3,14 @@
 .aboutBulbContentWrapper {
   container-type: inline-size;
   position: relative;
-
-  width: clamp(300px, 50vw, 700px);
+  width: clamp(520px, 70vw, 700px);
   height: 42vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: -100px;
+  margin-top: calc(-30px - 16vh);
+
   .lightSource {
     position: absolute;
     width: 100%;
@@ -20,7 +20,7 @@
     margin: auto auto auto 0;
     z-index: 1;
     background-color: $light-yellow;
-    filter: blur(16px);
+    filter: blur(38px);
   }
   .aboutMeTextWrapper {
     width: 50%;
