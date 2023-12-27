@@ -9,7 +9,7 @@ export function AboutBulbContent(props: AboutBulbContentProps): JSX.Element {
   return (
     <div
       className="aboutBulbContentWrapper"
-      // style={{ opacity: opacity }}
+      style={{ opacity: opacity }}
     >
       <div className="lightSource"></div>
       <div className="aboutMeTextWrapper">
