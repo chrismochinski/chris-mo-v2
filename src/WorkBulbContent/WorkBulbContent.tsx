@@ -5,7 +5,7 @@ interface WorkBulbContentProps {
 }
 
 export function WorkBulbContent(props: WorkBulbContentProps): JSX.Element {
-  const opacity = props.opacity[0] / 10;
+  const opacity = props.opacity[1] / 10;
   return (
     <div className="workBulbContentWrapper" style={{ opacity: opacity }}>
       <div className="lightSource"></div>
