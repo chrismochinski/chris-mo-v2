@@ -7,13 +7,13 @@ interface WorkBulbContentProps {
 export function WorkBulbContent(props: WorkBulbContentProps): JSX.Element {
   const opacity = props.opacity[0] / 10;
   return (
-    <div className="WorkBulbContentWrapper" style={{ opacity: opacity }}>
+    <div className="workBulbContentWrapper" style={{ opacity: opacity }}>
       <div className="lightSource"></div>
-      <div className="WorkTextWrapper">
-        <h2 className="WorkTitle">My Work</h2>
-        <p className="WorkText">My Name is Chris Mochinski.</p>
-        <p className="WorkText">I do stuff and it's neat.</p>
-        <p className="WorkText">Check out my neat stuff booiiiii!</p>
+      <div className="workTextWrapper">
+        <h2 className="workTitle">My Work</h2>
+        <p className="workText">My Name is Chris Mochinski.</p>
+        <p className="workText">I do stuff and it's neat.</p>
+        <p className="workText">Check out my neat stuff booiiiii!</p>
       </div>
     </div>
   );
